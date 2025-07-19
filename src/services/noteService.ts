@@ -49,10 +49,11 @@ export async function createNote(data: NewNoteData): Promise<Note> {
   return response.data;
 }
 
-export async function deleteNote(noteId: string | number): Promise<void> {
-  await axios.delete(`${API_URL}/notes/${noteId}`, {
+export async function deleteNote(noteId: string | number): Promise<Note> {
+  const response = await axios.delete<Note>(`${API_URL}/notes/${noteId}`, {
     headers: {
       Authorization: `Bearer ${TOKEN}`,
     },
   });
+  return response.data;
 }
