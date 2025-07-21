@@ -14,6 +14,7 @@ export default function NoteList({ notes }: NoteListProps) {
     mutationFn: deleteNote,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["notes"] });
+      alert("Post deleted!");
     },
   });
 

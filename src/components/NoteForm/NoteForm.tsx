@@ -43,6 +43,7 @@ export default function NoteForm({ onSuccess, onCancel }: NoteFormProps) {
     mutationFn: (noteData: NewNoteData) => createNote(noteData),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["notes"] });
+      alert("Post created!");
       onSuccess();
     },
   });
