@@ -1,7 +1,6 @@
 import css from "./Modal.module.css";
 import { createPortal } from "react-dom";
 import { useEffect } from "react";
-// import NoteForm from "../NoteForm/NoteForm";
 
 interface NoteModalProps {
   onClose: () => void;
@@ -37,10 +36,7 @@ export default function Modal({ onClose, children }: NoteModalProps) {
       role="dialog"
       aria-modal="true"
     >
-      <div className={css.modal}>
-        {/* <NoteForm /> */}
-        {children}
-      </div>
+      <div className={css.modal}>{children}</div>
     </div>,
     document.getElementById("modal-root") as HTMLDivElement
   );
