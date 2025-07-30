@@ -12,7 +12,8 @@ import NoteForm from "../NoteForm/NoteForm";
 import Modal from "../Modal/Modal";
 import SearchBox from "../SearchBox/SearchBox";
 import Loader from "../Loader/loader";
-import ErrorMessage from "../ErrorMessage/ErrrorMessage";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+//2
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
